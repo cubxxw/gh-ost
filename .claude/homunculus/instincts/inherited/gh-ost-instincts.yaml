@@ -1,0 +1,352 @@
+# Instincts generated from https://github.com/cubxxw/gh-ost
+# Generated: 2026-05-01T02:22:36.904Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: gh-ost-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/cubxxw/gh-ost
+---
+
+# Gh Ost Commit Length
+
+## Action
+
+Keep commit messages concise (~41 characters)
+
+## Evidence
+
+- Average commit message length: 41 chars
+- Based on 3 commits
+
+---
+id: gh-ost-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/gh-ost
+---
+
+# Gh Ost Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: gh-ost-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/gh-ost
+---
+
+# Gh Ost Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: gh-ost-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/gh-ost
+---
+
+# Gh Ost Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: gh-ost-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/cubxxw/gh-ost
+---
+
+# Gh Ost Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: gh-ost-workflow-update-go-version-or-linting
+trigger: "when doing update go version or linting"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/cubxxw/gh-ost
+---
+
+# Gh Ost Workflow Update Go Version Or Linting
+
+## Action
+
+Follow the update-go-version-or-linting workflow:
+1. Update configuration files (e.g., go.mod, Dockerfile, .golangci.yml, workflow YAMLs)
+2. Update scripts related to Go setup and testing
+3. Modify or touch Go source and test files to address compatibility or linting issues
+4. Update or add test expectations if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: go.mod, Dockerfile.packaging, Dockerfile.test
+
+---
+id: gh-ost-instinct-naming-files
+trigger: "When creating or renaming a file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/gh-ost
+---
+
+# Gh Ost Instinct Naming Files
+
+## Action
+
+Use snake_case for file names
+
+## Evidence
+
+- Pattern in namingConventions.files
+- Consistent file naming in repository
+
+---
+id: gh-ost-instinct-naming-functions
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/gh-ost
+---
+
+# Gh Ost Instinct Naming Functions
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in namingConventions.functions
+- Go source files in 'go/' folder
+
+---
+id: gh-ost-instinct-naming-classes
+trigger: "When defining a new struct or type that acts as a class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/gh-ost
+---
+
+# Gh Ost Instinct Naming Classes
+
+## Action
+
+Use PascalCase for class/type names
+
+## Evidence
+
+- Pattern in namingConventions.classes
+- Go source files in 'go/' folder
+
+---
+id: gh-ost-instinct-naming-constants
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/gh-ost
+---
+
+# Gh Ost Instinct Naming Constants
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in namingConventions.constants
+- Go source files in 'go/' folder
+
+---
+id: gh-ost-instinct-imports
+trigger: "When importing modules in Go files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/gh-ost
+---
+
+# Gh Ost Instinct Imports
+
+## Action
+
+Use relative imports
+
+## Evidence
+
+- Pattern in importStyle: relative
+- Go source files in 'go/' folder
+
+---
+id: gh-ost-instinct-exports
+trigger: "When exporting functions or types from a Go package"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/gh-ost
+---
+
+# Gh Ost Instinct Exports
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle: named
+- Go source files in 'go/' folder
+
+---
+id: gh-ost-instinct-testing-location
+trigger: "When adding new tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: cubxxw/gh-ost
+---
+
+# Gh Ost Instinct Testing Location
+
+## Action
+
+Place test files in the 'localtests' folder, separate from source code
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation: separate
+- Presence of 'localtests' folder
+
+---
+id: gh-ost-instinct-testing-expect-failure
+trigger: "When writing tests that are expected to fail"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: cubxxw/gh-ost
+---
+
+# Gh Ost Instinct Testing Expect Failure
+
+## Action
+
+Add expected failure files in 'localtests/**/expect_failure'
+
+## Evidence
+
+- Files involved in workflow: localtests/**/expect_failure
+- Commit history updating expect_failure files
+
+---
+id: gh-ost-instinct-git-commit-format
+trigger: "When writing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: cubxxw/gh-ost
+---
+
+# Gh Ost Instinct Git Commit Format
+
+## Action
+
+Use a short, descriptive summary (average ~41 characters), optionally referencing issues or PRs in parentheses
+
+## Evidence
+
+- Pattern in commits.averageLength
+- Examples: 'Retry attempt InstantDDL up to `--default-retries` (#1667)'
+
+---
+id: gh-ost-instinct-git-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: cubxxw/gh-ost
+---
+
+# Gh Ost Instinct Git Commit Prefix
+
+## Action
+
+No strict prefix required; use freeform descriptive text
+
+## Evidence
+
+- Pattern in commits.prefixes: []
+- Commit examples are freeform
+
+---
+id: gh-ost-instinct-update-go-or-lint
+trigger: "When someone wants to upgrade the Go version or update linting tools"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/gh-ost
+---
+
+# Gh Ost Instinct Update Go Or Lint
+
+## Action
+
+Update configuration files (go.mod, Dockerfile, .golangci.yml, workflow YAMLs), update related scripts, modify Go source/test files for compatibility, and update/add test expectations as needed
+
+## Evidence
+
+- Workflow: update-go-version-or-linting
+- Commit sequence and files in workflow definition
+- Commits like 'Update golangci-lint to v2.11 (#1657)', 'Upgrade to go1.25.9 (#1668)'
+
